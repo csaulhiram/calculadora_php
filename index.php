@@ -9,15 +9,17 @@
 </head>
 
 <body>
-    <h1>Calculadora</h1>
+    <h1>Calculadora PHP</h1>
 
     <form action="operacion.php" method="GET">
-        <label for="number1">Digita el primer número</label>
+        <label for="number1">Digita el primer número</label><br>
         <input type="text" name="number1" id="">
-
-        <label for="number2">Digita el segundo número</label>
+        <br>
+        <label for="number2">Digita el segundo número</label><br>
         <input type="text" name="number2" id="">
+        <br>
 
+        <h2>Selecciona la operación a realizar</h2>
         <input type="radio" name="operacion" value="sumar" id="">
         <label for="sumar">Sumar:</label>
 
@@ -34,9 +36,9 @@
         <input type="submit" value="Realizar operación">
     </form>
 
-    <?php if(isset($_GET['resultado'])): 
-        echo "<h1>Resultado:". $_GET['resultado'] ."</h1>";
-    endif;?>
+    <?php if (isset($_GET['resultado'])) :
+        echo "<h1>Resultado:" . $_GET['resultado'] . "</h1>";
+    endif; ?>
 </body>
 
 </html>
